@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang PUNICO</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ======= TEMA WARNA PUNICO ======= */
+    :root {
+      --biru-punico: #1E3A8A;      /* Biru tua logo */
+      --pink-sakura: #F472B6;      /* Pink bunga sakura */
+      --putih: #ffffff;
+      --abu-lembut: #f5f5f5;
+      --bayangan: rgba(0,0,0,0.1);
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--abu-lembut);
+      color: #333;
+    }
+
+    header {
+      background: var(--biru-punico);
+      color: var(--putih);
+      padding: 1rem 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    header nav a {
+      color: var(--putih);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    header nav a:hover {
+      color: var(--pink-sakura);
+    }
+
+    .store-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 5%;
+    }
+
+    .store-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--biru-punico);
+      margin-bottom: 2rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background: var(--putih);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px var(--bayangan);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .product-card h3 {
+      margin: 0.5rem 0;
+      color: var(--biru-punico);
+    }
+
+    .product-card p {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: var(--pink-sakura);
+      margin-bottom: 0.8rem;
+    }
+
+    .buy-btn {
+      background: var(--biru-punico);
+      color: var(--putih);
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .buy-btn:hover {
+      background: var(--pink-sakura);
+    }
+
+    footer {
+      background: var(--biru-punico);
+      color: var(--putih);
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="PUNICO Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="toko.html">Toko</a></li>
+        <li><a href="activities.html" class="active">Activities</a></li>
+        <li><a href="tentang.html">Tentang Kami</a></li>
+        <li><a href="hubungi.html">Hubungi Kami</a></li>
+      </ul>
+    </nav>
+    <div class="auth">
+      <a href="login.html" class="login-link">Login Admin</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero-tentang">
+    <div class="hero-content">
+      <h1>Selamat Datang di PUNICO</h1>
+      <p>President University Nippon Community</p>
+    </div>
+  </section>
+
+  <!-- ===== TENTANG PUNICO ===== -->
+  <section class="about-punico container">
+    <h2>Tentang Kami</h2>
+    <p>
+      <strong>PUNICO</strong> adalah singkatan dari <strong>“<i>P</i>resident <i>U</i>niversity <i>NI</i>ppon <i>CO</i>mmunity”</strong>.
+      Kami adalah komunitas yang lahir dari semangat dan kecintaan mahasiswa President University terhadap budaya Jepang.
+      Sejak berdiri pada <strong>tahun 2019</strong>, PUNICO menjadi rumah bagi para mahasiswa yang memiliki minat dan bakat di dunia Jejepangan:
+      mulai dari <em>manga</em>, <em>anime</em>, <em>cosplay</em>, musik J-pop, hingga seni tradisional Jepang.
+    </p>
+    <p>
+      Awalnya, PUNICO hanya beranggotakan segelintir mahasiswa yang sering berkumpul untuk menonton anime bersama
+      atau saling berbagi pengetahuan tentang budaya Jepang.
+      Namun semangat untuk terus berkembang membawa kami menjadi komunitas resmi di lingkungan President University.
+    </p>
+    <p>
+      Sejak kelahiran kami pada 2017, kami sudah mengadakan berbagai kegiatan spektakuler yang melibatkan seluruh kampus:
+      <ul>
+        <li><strong>PUNICO Matsuri</strong> – Festival budaya Jepang tahunan yang menghadirkan parade cosplay, bazar makanan Jepang, lomba karaoke, dan pertunjukan seni.</li>
+        <li><strong>Workshop Manga & Illustration</strong> – Pelatihan menggambar karakter ala manga bersama seniman berbakat.</li>
+        <li><strong>Japanese Movie Night</strong> – Nonton bareng film-film Jepang pilihan.</li>
+        <li><strong>Collaboration Day</strong> – Ajang kerja sama dengan komunitas kampus lain untuk memperkenalkan dan merayakan budaya Jepang.</li>
+      </ul>
+    </p>
+    <p>
+      Semua kegiatan ini tidak hanya mempererat hubungan antaranggota, tetapi juga
+      membawa semangat budaya Jepang ke seluruh kampus,
+      menciptakan warna baru bagi kehidupan mahasiswa di President University.
+    </p>
+  </section>
+
+  <!-- ===== VISI MISI ===== -->
+  <section class="visi-misi container">
+    <h2>Visi Kami</h2>
+    <p>Menjadi komunitas budaya Jepang terdepan di President University yang menginspirasi dan memberdayakan mahasiswa untuk mengekspresikan diri melalui seni, kreativitas, dan kolaborasi.</p>
+
+    <h2>Misi Kami</h2>
+    <ul>
+      <li>Menyediakan ruang bagi mahasiswa yang memiliki minat di bidang budaya Jepang.</li>
+      <li>Mengadakan kegiatan yang mendidik sekaligus menghibur tentang budaya Jepang.</li>
+      <li>Memfasilitasi anggota untuk mengembangkan bakat seperti menggambar manga, cosplay, musik, hingga seni panggung.</li>
+      <li>Memperkuat kerja sama dengan komunitas lain di dalam maupun luar kampus.</li>
+    </ul>
+  </section>
+
+  <!-- ===== STRUKTUR ORGANISASI ===== -->
+  <section class="org-section container">
+    <h2>Struktur Organisasi</h2>
+    <img src="images/struc.jpg" alt="Struktur Organisasi PUNICO" class="org-chart">
+  </section>
+
+  <!-- ===== MEMBER RESMI ===== -->
+  <section class="member-section container">
+    <h2>Member Resmi PUNICO</h2>
+    <img src="images/niko.png" alt="Member Resmi PUNICO" class="members-img">
+    <img src="images/puni.png" alt="Member Resmi PUNICO" class="members-img">
+    <img src="images/nichi.png" alt="Member Resmi PUNICO" class="members-img">
+
+  </section>
+<div class="floating-layer left"></div>
+<div class="floating-layer right"></div>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 PUNICO - President University NIppon COmmunity</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

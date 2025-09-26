@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUNICO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="PUNICO Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="toko.html">Toko</a></li>
+        <li><a href="activities.html" class="active">Activities</a></li>
+        <li><a href="tentang.html">Tentang Kami</a></li>
+        <li><a href="hubungi.html">Hubungi Kami</a></li>
+      </ul>
+    </nav>
+    <div class="auth">
+      <a href="login.html" id="loginBtn" class="login-link">Login Admin</a>
+    </div>
+  </header>
+
+
+
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>A little place<br>of paradise</h1>
+      <p>Selamat datang di website PUNICO. Temukan berita, event, dan informasi terbaru komunitas kami.</p>
+      <a href="#berita" class="start-btn">Lihat Berita</a>
+    </div>
+  </section>
+
+  <!-- Berita -->
+  <section id="berita" class="berita">
+    <h2>Berita Terbaru</h2>
+    <div id="beritaList" class="berita-list">
+      <p>Belum ada berita.</p>
+    </div>
+  </section>
+  <div class="see-more">
+    <a href="berita.html" class="see-more-btn">Lihat Semua Berita</a>
+  </div>
+
+  <!-- ================== TOKO DI HALAMAN UTAMA ================== -->
+<section class="store-container home-store">
+  <h2 class="store-title">Produk Kami</h2>
+
+  <div class="product-grid">
+
+    <!-- Produk 1 -->
+    <div class="product-card">
+      <img src="t-shirt.png" alt="Kaos Punico">
+      <h3>Kaos Punico</h3>
+      <p>Kaos eksklusif komunitas PUNICO dengan desain logo sakura.</p>
+      <div class="price">Rp 100.000</div>
+      <button class="buy-btn" onclick="window.location.href='https://wa.me/+6282299871645?text=Saya%20ingin%20membeli%20Kaos%20Punico'">Beli Sekarang</button>
+    </div>
+
+    <!-- Produk 2 -->
+    <div class="product-card">
+      <img src="band.png" alt="Band Tangan">
+      <h3>Band Tangan</h3>
+      <p>Band tangan dengan desain eksklusif Punico.</p>
+      <div class="price">Rp 15.000</div>
+      <button class="buy-btn" onclick="window.location.href='https://wa.me/+6282299871645?text=Saya%20ingin%20membeli%20Band%20Tangan%20Punico'">Beli Sekarang</button>
+    </div>
+
+    <!-- Produk 3 -->
+    <div class="product-card">
+      <img src="hoodie.png" alt="Hoodie Punico">
+      <h3>Hoodie Punico</h3>
+      <p>Hoodie nyaman dengan desain eksklusif Punico.</p>
+      <div class="price">Rp 150.000</div>
+      <button class="buy-btn" onclick="window.location.href='https://wa.me/+6282299871645?text=Saya%20ingin%20membeli%20Hoodie%20Punico'">Beli Sekarang</button>
+    </div>
+
+  </div>
+
+  <!-- Tautan ke toko lengkap -->
+  <div class="see-more">
+    <a href="toko.html" class="see-more-btn">Lihat Semua Produk</a>
+  </div>
+</section>
+<!-- ============================= -->
+<!-- ACTIVITIES PREVIEW SECTION    -->
+<!-- ============================= -->
+
+<section class="activities-preview">
+  <h1 class="section-title">Our Activities</h1>
+  <p class="section-subtitle">Lihat berbagai kegiatan dan unit yang membuat PUNICO hidup dan seru!</p>
+
+  <div class="activities-grid">
+
+    <!-- Activity 1 -->
+    <div class="activity-card">
+      <img src="images/pr1.jpg" alt="Public Relations">
+      <h3>Public Relations</h3>
+      <p>Menjalin hubungan dengan publik, media, sponsor, dan mitra kampus.</p>
+      <button onclick="window.location.href='activities.html#pr'">Lihat Lebih</button>
+    </div>
+
+    <!-- Activity 2 -->
+    <div class="activity-card">
+      <img src="images/manga1.jpeg" alt="Manga Unit">
+      <h3>Manga Unit</h3>
+      <p>Tempat anggota mengasah bakat menggambar manga dan ilustrasi khas Jepang.</p>
+      <button onclick="window.location.href='activities.html#manga'">Lihat Lebih</button>
+    </div>
+
+    <!-- Activity 3 -->
+    <div class="activity-card">
+      <img src="images/kosu1.jpeg" alt="Kosu Unit">
+      <h3>Kosu Unit</h3>
+      <p>Unit cosplay yang menghadirkan karakter anime & game ke panggung nyata.</p>
+      <button onclick="window.location.href='activities.html#kosu'">Lihat Lebih</button>
+    </div>
+
+    <!-- Activity 4 -->
+    <div class="activity-card">
+      <img src="images/ongaku1.jpg" alt="Ongaku Unit">
+      <h3>Ongaku Unit</h3>
+      <p>Unit musik yang menyanyikan lagu-lagu anisong dan menghidupkan acara.</p>
+      <button onclick="window.location.href='activities.html#ongaku'">Lihat Lebih</button>
+    </div>
+  </div>
+
+  <div class="more-btn-container">
+    <button class="more-btn" onclick="window.location.href='activities.html'">Lihat Semua Activities</button>
+  </div>
+</section>
+
+<!-- ============================= -->
+<!-- ABOUT US PREVIEW SECTION     -->
+<!-- ============================= -->
+
+<section class="about-preview">
+  <h1 class="section-title">Tentang Kami</h1>
+
+  <div class="about-content">
+    <div class="about-image">
+      <img src="img1.jpg" alt="PUNICO Team">
+    </div>
+
+    <div class="about-text">
+      <p>
+        <strong>PUNICO</strong> (President University Nippon Community) adalah komunitas mahasiswa yang mencintai budaya Jepang. 
+        Sejak berdiri tahun <strong>2017</strong>, kami telah menjadi rumah bagi para penggemar manga, anime, cosplay, musik, dan berbagai aktivitas yang berhubungan dengan budaya Jepang.  
+      </p>
+
+      <p>
+        Kami rutin mengadakan event besar, seperti <strong>PUNICO Matsuri</strong>, yang melibatkan seluruh mahasiswa President University dan komunitas jejepangan di sekitarnya.  
+      </p>
+
+      <p>
+        Yuk kenali lebih dekat sejarah, visi, dan anggota kami yang membuat PUNICO terus berkembang!
+      </p>
+
+      <button class="more-btn" onclick="window.location.href='tentang.html'">
+        Lihat Selengkapnya
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= -->
+<!-- CONTACT US PREVIEW SECTION   -->
+<!-- ============================= -->
+
+<section class="contact-preview">
+  <h1 class="section-title">Hubungi Kami</h1>
+  <p class="section-subtitle">
+    Ingin tahu lebih banyak atau bergabung dengan kami?  
+    Temui kami melalui media sosial di bawah ini!
+  </p>
+
+  <div class="contact-icons">
+    <a href="https://www.instagram.com/punico_official" target="_blank" class="contact-icon instagram">
+      <img src="images/instagram.png" alt="Instagram">
+      <span>Instagram</span>
+    </a>
+
+    <a href="https://wa.me/6282299871645" target="_blank" class="contact-icon whatsapp">
+      <img src="images/whatsapp.png" alt="WhatsApp">
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="https://discord.gg/punico" target="_blank" class="contact-icon discord">
+      <img src="images/discord.png" alt="Discord">
+      <span>Discord</span>
+    </a>
+  </div>
+
+  <div class="more-btn-container">
+    <button class="more-btn" onclick="window.location.href='hubungi.html'">
+      Lihat Detail Kontak
+    </button>
+  </div>
+</section>
+
+<!-- Lapisan gambar kiri & kanan -->
+<div class="floating-layer left"></div>
+<div class="floating-layer right"></div>
+  
+
+  <script src="script.js"></script>
+<footer>
+    &copy; 2025 PUNICO - President University NIppon COmmunity
+  </footer>
+  
+  <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  const slides = document.getElementsByClassName("slides");
+  const dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
+
+// Auto-slide every 5 seconds
+setInterval(() => { plusSlides(1); }, 5000);
+</script>
+
+</body>
+</html>

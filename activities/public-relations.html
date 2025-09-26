@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUNICO – Public Relations</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .activity-section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .activity-section h1 {
+      font-size: 2.5rem;
+      color: #2D4E8A;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .activity-section p {
+      font-size: 1rem;
+      color: #444;
+      text-align: justify;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .post-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .post-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .post-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .post-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .post-card h3 {
+      font-size: 1.2rem;
+      margin: 15px;
+      color: #2D4E8A;
+    }
+
+    .post-card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin: 0 15px 20px 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="activity-section">
+    <h1>Public Relations</h1>
+    <p>
+      Unit Public Relations bertugas menghubungkan PUNICO dengan pihak eksternal
+      seperti media, sponsor, dan mitra komunitas lain. Kami memastikan setiap
+      event PUNICO dikenal luas dan memiliki citra yang baik di mata publik.
+    </p>
+
+    <div class="post-grid">
+      <div class="post-card">
+        <img src="../images/event1.jpg" alt="PR Event">
+        <h3>Press Release Puniko Matsuri</h3>
+        <p>Mempublikasikan acara Puniko Matsuri ke berbagai media kampus dan partner.</p>
+      </div>
+
+      <div class="post-card">
+        <img src="../images/event2.jpg" alt="Meeting">
+        <h3>Media Partner Gathering</h3>
+        <p>Menjalin kerja sama dengan komunitas kreatif di sekitar President University.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

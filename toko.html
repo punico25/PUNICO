@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUNICO Store</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ======= TEMA WARNA PUNICO ======= */
+    :root {
+      --biru-punico: #1E3A8A;      /* Biru tua logo */
+      --pink-sakura: #F472B6;      /* Pink bunga sakura */
+      --putih: #ffffff;
+      --abu-lembut: #f5f5f5;
+      --bayangan: rgba(0,0,0,0.1);
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--abu-lembut);
+      color: #333;
+    }
+
+    header {
+      background: var(--biru-punico);
+      color: var(--putih);
+      padding: 1rem 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    header nav a {
+      color: var(--putih);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    header nav a:hover {
+      color: var(--pink-sakura);
+    }
+
+    .store-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 5%;
+    }
+
+    .store-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--biru-punico);
+      margin-bottom: 2rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background: var(--putih);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px var(--bayangan);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .product-card h3 {
+      margin: 0.5rem 0;
+      color: var(--biru-punico);
+    }
+
+    .product-card p {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: var(--pink-sakura);
+      margin-bottom: 0.8rem;
+    }
+
+    .buy-btn {
+      background: var(--biru-punico);
+      color: var(--putih);
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .buy-btn:hover {
+      background: var(--pink-sakura);
+    }
+
+    footer {
+      background: var(--biru-punico);
+      color: var(--putih);
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+    
+
+  <!-- ========== HEADER / NAVBAR ========== -->
+   <header class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="PUNICO Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="toko.html">Toko</a></li>
+        <li><a href="activities.html" class="active">Activities</a></li>
+        <li><a href="tentang.html">Tentang Kami</a></li>
+        <li><a href="hubungi.html">Hubungi Kami</a></li>
+      </ul>
+    </nav>
+    <div class="auth">
+      <a href="login.html" class="login-link">Login Admin</a>
+    </div>
+  </header>
+<br><br><br>
+  <!-- ========== KONTEN TOKO ========== -->
+  <section class="store-container">
+    <h1 class="store-title">Produk Kami</h1>
+    <div class="product-grid">
+      
+      <!-- Produk 1 -->
+      <div class="product-card">
+        <img src="images/t-shirt.png" alt="Kaos Punico">
+        <h3>Kaos Punico</h3>
+        <p>Kaos eksklusif komunitas PUNICO dengan desain logo sakura.</p>
+        <div class="price">Rp 100.000</div>
+        <button class="buy-btn"onclick="window.location.href='https://wa.me/+6282299871645?text=Saya%20ingin%20membeli%20Kaos%20Punico'">Beli Sekarang</button>
+      </div>
+
+      <!-- Produk 2 -->
+      <div class="product-card">
+        <img src="images/band.png" alt="Tote Bag Punico">
+        <h3>Band tangan</h3>
+        <p>Band tangan dengan desain eksklusif Punico.</p>
+        <div class="price">Rp 15.000</div>
+        <button class="buy-btn"onclick="window.location.href='https://wa.me/+6282299871645?text=Saya%20ingin%20membeli%20Kaos%20Punico'">Beli Sekarang</button>
+      </div>
+
+      <!-- Produk 3 -->
+      <div class="product-card">
+        <img src="images/hoodie.png" alt="Hoodie Punico">
+        <h3>Hoodie Punico</h3>
+        <p>Hoodie nyaman dengan desain eksklusif Punico.</p>
+        <div class="price">Rp 150.000</div>
+        <button class="buy-btn"onclick="window.location.href='https://wa.me/+6282299871645?text=Saya%20ingin%20membeli%20Kaos%20Punico'">Beli Sekarang</button>
+      </div>
+
+      <!-- Produk 4 -->
+      <div class="product-card">
+        <img src="images/jacket.png" alt="Poster Punico">
+        <h3>Jacket Punico</h3>
+        <p>Jacket premium dengan ilustrasi eksklusif Punico Matsuri.</p>
+        <div class="price">Rp 150.000</div>
+        <button class="buy-btn"onclick="window.location.href='https://wa.me/+6282299871645?text=Saya%20ingin%20membeli%20Kaos%20Punico'">Beli Sekarang</button>
+      </div>
+
+      <!-- Produk 5 -->
+      <div class="product-card">
+        <img src="images/keyholder.png" alt="Gantungan Kunci">
+        <h3>Gantungan Kunci</h3>
+        <p>Gantungan kunci akrilik karakter maskot Punico.</p>
+        <div class="price">Rp 30.000</div>
+        <button class="buy-btn"onclick="window.location.href='https://wa.me/+6282299871645?text=Saya%20ingin%20membeli%20Kaos%20Punico'">Beli Sekarang</button>
+      </div>
+
+      <!-- Produk 6 -->
+      <div class="product-card">
+        <img src="images/punifi.png" alt="Figure Puni">
+        <h3>Figure Puni</h3>
+        <p>Figure Puni karakter maskot Punico.</p>
+        <div class="price">Rp 300.000</div>
+        <button class="buy-btn"onclick="window.location.href='https://wa.me/+6282299871645?text=Saya%20ingin%20membeli%20Kaos%20Punico'">Beli Sekarang</button>
+      </div>
+
+      <!-- Produk 7 -->
+      <div class="product-card">
+        <img src="images/nikofi.png" alt="Figure Niko">
+        <h3>Figure Niko</h3>
+        <p>Figure Niko karakter maskot Punico.</p>
+        <div class="price">Rp 300.000</div>
+        <button class="buy-btn"onclick="window.location.href='https://wa.me/+6282299871645?text=Saya%20ingin%20membeli%20Kaos%20Punico'">Beli Sekarang</button>
+      </div>
+
+      <!-- Produk 8 -->
+      <div class="product-card">
+        <img src="images/nichifi.png" alt="Figure Nichi">
+        <h3>Figure Nichi</h3>
+        <p>Figure Nichi karakter maskot Punico.</p>
+        <div class="price">Rp 300.000</div>
+        <button class="buy-btn"onclick="window.location.href='https://wa.me/+6282299871645?text=Saya%20ingin%20membeli%20Kaos%20Punico'">Beli Sekarang</button>
+      </div>
+<button class="buy-btn" onclick="window.location.href='https://wa.me/+6282299871645?text=Saya%20ingin%20membeli%20Kaos%20Punico'">Beli Sekarang</button>
+
+    </div>
+  </section>
+<div class="floating-layer left"></div>
+<div class="floating-layer right"></div>
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    &copy; 2025 PUNICO. Semua Hak Dilindungi.
+  </footer>
+
+</body>
+</html>

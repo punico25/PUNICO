@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUNICO - Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">PUNICO Admin Panel</div>
+    <nav>
+      <span id="adminInfo">Halo, Admin</span>
+      <button id="saveChanges">Save Perubahan</button>
+      <button id="logoutBtn">Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Kelola Berita</h2>
+    <div id="beritaAdminList" class="berita-list"></div>
+
+    <div id="beritaForm">
+      <input type="text" id="judulBerita" placeholder="Judul Berita">
+      <textarea id="isiBerita" placeholder="Isi berita"></textarea>
+      <button id="tambahBeritaBtn">Tambah Berita</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f9f9f9;
+    color: #333;
+  }
+
+  header {
+    background: #3B7E66;
+    color: #fff;
+    padding: 1rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  header nav {
+    display: flex;
+    align-items: center;
+  }
+
+  header
+nav button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background: #3B7E66;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+nav span {
+  margin-right: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+</style>

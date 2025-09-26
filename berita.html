@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUNICO Events</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ======= TEMA WARNA PUNICO ======= */
+    :root {
+      --biru-punico: #1E3A8A;      /* Biru tua logo */
+      --pink-sakura: #F472B6;      /* Pink bunga sakura */
+      --putih: #ffffff;
+      --abu-lembut: #f5f5f5;
+      --bayangan: rgba(0,0,0,0.1);
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--abu-lembut);
+      color: #333;
+    }
+
+    header {
+      background: var(--biru-punico);
+      color: var(--putih);
+      padding: 1rem 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    header nav a {
+      color: var(--putih);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    header nav a:hover {
+      color: var(--pink-sakura);
+    }
+
+    .store-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 5%;
+    }
+
+    .store-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--biru-punico);
+      margin-bottom: 2rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background: var(--putih);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px var(--bayangan);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .product-card h3 {
+      margin: 0.5rem 0;
+      color: var(--biru-punico);
+    }
+
+    .product-card p {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: var(--pink-sakura);
+      margin-bottom: 0.8rem;
+    }
+
+    .buy-btn {
+      background: var(--biru-punico);
+      color: var(--putih);
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .buy-btn:hover {
+      background: var(--pink-sakura);
+    }
+
+    footer {
+      background: var(--biru-punico);
+      color: var(--putih);
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+    
+
+  <!-- ========== HEADER / NAVBAR ========== -->
+   <header class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="PUNICO Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="toko.html">Toko</a></li>
+        <li><a href="activities.html" class="active">Activities</a></li>
+        <li><a href="tentang.html">Tentang Kami</a></li>
+        <li><a href="hubungi.html">Hubungi Kami</a></li>
+      </ul>
+    </nav>
+    <div class="auth">
+      <a href="login.html" class="login-link">Login Admin</a>
+    </div>
+  </header>
+<br><br><br>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }.container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #004085;
+      margin-bottom: 20px;
+    }.news-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }.news-item strong {
+      display: block;
+      font-size: 16px;
+      color: #222;
+      margin-bottom: 8px;
+    }.news-item p {
+      margin: 0;
+      color: #555;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Berita Terbaru</h2>
+
+    <div class="news-item">
+      <strong>Punico Matsuri</strong>
+      <p>Punico Matsuri akan diadakan pada 5 Januari 2026. Diharapkan kepada seluruh anggota untuk bersiap-siap dengan cosplay terbaik!</p>
+    </div>
+
+    <div class="news-item">
+      <strong>Workshop Manga Digital</strong>
+      <p>Pelatihan menggambar manga secara digital dengan software Clip Studio akan digelar pada 15 November 2025.</p>
+    </div>
+
+    <div class="news-item">
+      <strong>Pameran Figurine PUNICO</strong>
+      <p>Pameran koleksi figurine karakter anime langka akan diadakan di Aula Kampus pada 20 Desember 2025.</p>
+    </div>
+
+    <div class="news-item">
+      <strong>Lomba Karaoke Anime OST</strong>
+      <p>Lomba karaoke khusus lagu-lagu anime favorit akan diselenggarakan pada 12 Februari 2026.</p>
+    </div>
+
+    <div class="news-item">
+      <strong>PUNICO Game Night</strong>
+      <p>Malam game bersama anggota PUNICO dengan turnamen Genshin Impact dan Valorant pada 1 Maret 2026.</p>
+    </div>
+
+    <div class="news-item">
+      <strong>Donasi untuk Komunitas Pecinta Anime</strong>
+      <p>PUNICO menggalang dana untuk membantu anak-anak yang ingin belajar seni menggambar anime. Program ini dibuka sepanjang tahun 2025–2026.</p>
+    </div>
+  </div>
+
+<!-- ========== FOOTER ========== -->
+  <footer>
+    &copy; 2025 PUNICO. Semua Hak Dilindungi.
+  </footer>
+
+</body>
+</html>
