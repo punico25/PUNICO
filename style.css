@@ -969,7 +969,7 @@ body, html {
 
 /* Header */
 #chat-header {
-  background: #4e73df;
+  background: #DB7E91;
   color: #fff;
   display: flex;
   align-items: center;
@@ -1008,7 +1008,7 @@ body, html {
 }
 
 .user-msg {
-  background: #4e73df;
+  background: #DB7E91;
   color: #fff;
   padding: 5px 10px;
   border-radius: 8px;
@@ -1029,12 +1029,13 @@ body, html {
 }
 
 #send-btn {
-  background: #4e73df;
+  background: #DB7E91;
   color: #fff;
   border: none;
   padding: 5px 15px;
   cursor: pointer;
 }
+
 
 
 
