@@ -242,6 +242,89 @@
     &copy; 2025 PUNICO. Semua Hak Dilindungi.
   </footer>
 
+    <!-- Chatbot Container -->
+<div id="chatbot">
+  <div id="chat-header">
+    <img id="bot-avatar" src="images/go-hat.png" alt="Bot Avatar">
+    <span id="bot-name">Puni Bot</span>
+    <button id="close-chat">×</button>
+  </div>
+
+  <div id="chat-body"></div>
+
+  <div id="chat-input-area">
+    <input type="text" id="chat-input" placeholder="Tulis pesan...">
+    <button id="send-btn">Kirim</button>
+  </div>
+</div>
+
+<!-- Tombol Buka Chatbot -->
+<div id="chat-toggle">
+  <img src="images/go-hat.png" alt="Chat Icon">
+</div>
+
+<script>
+const toggle = document.getElementById("chat-toggle");
+const chatbot = document.getElementById("chatbot");
+const closeBtn = document.getElementById("close-chat");
+const sendBtn = document.getElementById("send-btn");
+const input = document.getElementById("chat-input");
+const chatBody = document.getElementById("chat-body");
+
+// Tampilkan & sembunyikan chatbot
+toggle.addEventListener("click", () => {
+  chatbot.style.display = "flex";
+  toggle.style.display = "none";
+});
+
+closeBtn.addEventListener("click", () => {
+  chatbot.style.display = "none";
+  toggle.style.display = "block";
+});
+
+// Fungsi kirim pesan
+sendBtn.addEventListener("click", sendMessage);
+input.addEventListener("keypress", (e) => {
+  if(e.key === "Enter") sendMessage();
+});
+
+function sendMessage() {
+  const msg = input.value.trim();
+  if(!msg) return;
+
+  // tampilkan pesan user
+  appendMessage(msg, "user");
+
+  // balasan sederhana
+  let reply = "Maaf, aku tidak mengerti. Bisa ulangi?";
+  if (msg.toLowerCase().includes("hi")) reply = "Halo! Aku Puni 😊";
+  else if (msg.toLowerCase().includes("halo")) reply = "Hai juga! Ada yang bisa aku bantu?";
+  else if (msg.toLowerCase().includes("siapa kamu")) reply = "Aku adalah asisten maskot Punico, nama ku Puni!";
+  else if (msg.toLowerCase().includes("apa itu punico")) reply = "Punico adalah komunitas mahasiswa pecinta budaya Jepang di President University.";
+  else if (msg.toLowerCase().includes("bagaimana cara bergabung")) reply = "Kamu bisa bergabung dengan menghubungi kami melalui halaman Hubungi Kami.";
+  else if (msg.toLowerCase().includes("terima kasih")) reply = "Sama-sama! Senang bisa membantu 😊";
+  else if (msg.toLowerCase().includes("siapa admin punico")) reply = "Admin kami adalah @PinkRyu dan @AlvRyan. Kamu bisa menghubungi mereka untuk info lebih lanjut.";
+  else if (msg.toLowerCase().includes("dimana punico")) reply = "Kamu bisa menemukan kami di President University, Cikarang, Bekasi.";
+  else if (msg.toLowerCase().includes("kapan punico berdiri")) reply = "Punico berdiri pada tahun 2017.";
+  else if (msg.toLowerCase().includes("apa kegiatan punico")) reply = "Kami mengadakan berbagai kegiatan seperti Punico Matsuri, workshop manga, karaoke night, dan masih banyak lagi!";
+  else if (msg.toLowerCase().includes("siapa ketua punico")) reply = "Ketua Punico saat ini adalah @AlvRyan.";
+  else if (msg.toLowerCase().includes("terima kasih banyak")) reply = "Sama-sama! Senang bisa membantu 😊";
+  else if (msg.toLowerCase().includes("siapa wakil ketua punico")) reply = "Wakil ketua Punico saat ini adalah @PinkRyu.";
+  else if (msg.toLowerCase().includes("siapa sekretaris punico")) reply = "Sekretaris Punico saat ini adalah @Dwi-senpai.";
+  else if (msg.toLowerCase().includes("bye")) reply = "Sampai jumpa 👋";
+  setTimeout(() => appendMessage(reply, "bot"), 500);
+  input.value = "";
+}
+
+function appendMessage(text, sender) {
+  const msgDiv = document.createElement("div");
+  msgDiv.className = sender === "bot" ? "bot-msg" : "user-msg";
+  msgDiv.innerText = text;
+  chatBody.appendChild(msgDiv);
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+</script>
 </body>
 </html>
+
 
