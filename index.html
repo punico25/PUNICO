@@ -284,7 +284,106 @@ function showSlides(n) {
 // Auto-slide every 5 seconds
 setInterval(() => { plusSlides(1); }, 5000);
 </script>
+<!-- Chatbot Container -->
+<div id="chatbot">
+  <div id="chat-header">
+    <img id="bot-avatar" src="images/go-hat.png" alt="Bot Avatar">
+    <span id="bot-name">Puni Bot</span>
+    <button id="close-chat">×</button>
+  </div>
 
+  <div id="chat-body"></div>
+
+  <div id="chat-input-area">
+    <input type="text" id="chat-input" placeholder="Tulis pesan...">
+    <button id="send-btn">Kirim</button>
+  </div>
+</div>
+
+<!-- Tombol Buka Chatbot -->
+<div id="chat-toggle">
+  <img src="images/go-hat.png" alt="Chat Icon">
+</div>
+
+<script>
+const toggle = document.getElementById("chat-toggle");
+const chatbot = document.getElementById("chatbot");
+const closeBtn = document.getElementById("close-chat");
+const sendBtn = document.getElementById("send-btn");
+const input = document.getElementById("chat-input");
+const chatBody = document.getElementById("chat-body");
+
+// Tampilkan & sembunyikan chatbot
+toggle.addEventListener("click", () => {
+  chatbot.style.display = "flex";
+  toggle.style.display = "none";
+});
+
+closeBtn.addEventListener("click", () => {
+  chatbot.style.display = "none";
+  toggle.style.display = "block";
+});
+
+// Fungsi kirim pesan
+sendBtn.addEventListener("click", sendMessage);
+input.addEventListener("keypress", (e) => {
+  if(e.key === "Enter") sendMessage();
+});
+
+function sendMessage() {
+  const msg = input.value.trim();
+  if(!msg) return;
+
+  // tampilkan pesan user
+  appendMessage(msg, "user");
+
+  // balasan sederhana
+  let reply = "Halo! Aku Puni 😊";
+  if (msg.toLowerCase().includes("halo")) reply = "Hai juga! Ada yang bisa aku bantu?";
+  else if (msg.toLowerCase().includes("siapa kamu")) reply = "Aku adalah asisten maskot Punico, nama ku Puni!";
+  else if (msg.toLowerCase().includes("apa itu puniko")) reply = "Punico adalah komunitas mahasiswa pecinta budaya Jepang di President University.";
+  else if (msg.toLowerCase().includes("bagaimana cara bergabung")) reply = "Kamu bisa bergabung dengan menghubungi kami melalui halaman Hubungi Kami.";
+  else if (msg.toLowerCase().includes("terima kasih")) reply = "Sama-sama! Senang bisa membantu 😊";
+  else if (msg.toLowerCase().includes("siapa adminnya")) reply = "Admin kami adalah @PinkRyu dan @AlvRyan. Kamu bisa menghubungi mereka untuk info lebih lanjut.";
+  else if (msg.toLowerCase().includes("dimana punico")) reply = "Kamu bisa menemukan kami di President University, Cikarang, Bekasi.";
+  else if (msg.toLowerCase().includes("kapan puniko berdiri")) reply = "Punico berdiri pada tahun 2017.";
+  else if (msg.toLowerCase().includes("apa kegiatan puniko")) reply = "Kami mengadakan berbagai kegiatan seperti Punico Matsuri, workshop manga, karaoke night, dan masih banyak lagi!";
+  else if (msg.toLowerCase().includes("siapa ketua puniko")) reply = "Ketua Punico saat ini adalah @AlvRyan.";
+  else if (msg.toLowerCase().includes("berapa harga kaos punico")) reply = "Harga kaos Punico adalah Rp 100.000.";
+  else if (msg.toLowerCase().includes("berapa harga hoodie punico")) reply = "Harga hoodie Punico adalah Rp 150.000.";
+  else if (msg.toLowerCase().includes("berapa harga band tangan punico")) reply = "Harga band tangan Punico adalah Rp 15.000.";
+  else if (msg.toLowerCase().includes("terima kasih banyak")) reply = "Sama-sama! Senang bisa membantu 😊";
+  else if (msg.toLowerCase().includes("siapa wakil ketua puniko")) reply = "Wakil ketua Punico saat ini adalah @PinkRyu.";
+  else if (msg.toLowerCase().includes("siapa sekretaris puniko")) reply = "Sekretaris Punico saat ini adalah @Dwi-senpai.";
+  else if (msg.toLowerCase().includes("siapa bendahara puniko")) reply = "Bendahara Punico saat ini adalah @HafizhAulia.";
+  else if (msg.toLowerCase().includes("siapa kepala divisi pr")) reply = "Kepala divisi Public Relations kami adalah @NadiaFitria.";
+  else if (msg.toLowerCase().includes("siapa kepala divisi manga")) reply = "Kepala divisi Manga kami adalah @AlvRyan.";
+  else if (msg.toLowerCase().includes("siapa kepala divisi kosu")) reply = "Kepala divisi Kosu kami adalah @PinkRyu.";
+  else if (msg.toLowerCase().includes("siapa kepala divisi ongaku")) reply = "Kepala divisi Ongaku kami adalah @HafizhAulia.";
+  else if (msg.toLowerCase().includes("apa itu punico matsuri")) reply = "Punico Matsuri adalah festival budaya Jepang tahunan yang kami adakan dengan berbagai acara seru seperti parade cosplay, bazar makanan Jepang, lomba karaoke, dan pertunjukan seni.";
+  else if (msg.toLowerCase().includes("bagaimana cara membeli produk punico")) reply = "Kamu bisa membeli produk Punico melalui halaman Toko kami atau menghubungi kami via WhatsApp.";
+  else if (msg.toLowerCase().includes("apa saja produk punico")) reply = "Kami memiliki berbagai produk seperti kaos, hoodie, band tangan, gantungan kunci, dan figure Puni.";
+  else if (msg.toLowerCase().includes("berapa harga gantungan kunci punico")) reply = "Harga gantungan kunci Punico adalah Rp 30.000.";
+  else if (msg.toLowerCase().includes("berapa harga figure puni")) reply = "Harga figure Puni adalah Rp 75.000.";
+  else if (msg.toLowerCase().includes("siapa maskot punico")) reply = "Maskot kami adalah Puni, seekor anjing Shiba Inu yang lucu dan menggemaskan!";
+  else if (msg.toLowerCase().includes("apa visi misi punico")) reply = "Visi kami adalah menjadi komunitas jejepangan terkemuka di President University. Misi kami adalah menyebarkan kecintaan terhadap budaya Jepang melalui berbagai kegiatan dan event.";
+  else if (msg.toLowerCase().includes("kapan punico matsuri diadakan")) reply = "Punico Matsuri biasanya diadakan setiap awal tahun, tepatnya pada bulan Januari.";
+  else if (msg.toLowerCase().includes("dimana punico matsuri diadakan")) reply = "Punico Matsuri diadakan di area kampus President University.";
+  else if (msg.toLowerCase().includes("siapa yang bisa bergabung dengan punico")) reply = "Siapa saja mahasiswa President University yang memiliki minat terhadap budaya Jepang bisa bergabung dengan Punico!";
+  else if (msg.toLowerCase().includes("apa saja kegiatan manga unit")) reply = "Manga Unit kami sering mengadakan workshop menggambar manga, sesi berbagi teknik ilustrasi, dan kompetisi menggambar antar anggota.";
+  else if (msg.toLowerCase().includes("bye")) reply = "Sampai jumpa 👋";
+  setTimeout(() => appendMessage(reply, "bot"), 500);
+  input.value = "";
+}
+
+function appendMessage(text, sender) {
+  const msgDiv = document.createElement("div");
+  msgDiv.className = sender === "bot" ? "bot-msg" : "user-msg";
+  msgDiv.innerText = text;
+  chatBody.appendChild(msgDiv);
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+</script>
 
 </body>
 </html>
