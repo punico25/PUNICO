@@ -337,9 +337,10 @@ function sendMessage() {
   // tampilkan pesan user
   appendMessage(msg, "user");
 
-  // balasan sederhana
-  let reply = "Halo! Aku Puni 😊";
-  if (msg.toLowerCase().includes("halo")) reply = "Hai juga! Ada yang bisa aku bantu?";
+ // balasan sederhana
+  let reply = "Maaf, aku tidak mengerti. Bisa ulangi?";
+  if (msg.toLowerCase().includes("hi")) reply = "Halo! Aku Puni 😊";
+  else if (msg.toLowerCase().includes("halo")) reply = "Hai juga! Ada yang bisa aku bantu?";
   else if (msg.toLowerCase().includes("siapa kamu")) reply = "Aku adalah asisten maskot Punico, nama ku Puni!";
   else if (msg.toLowerCase().includes("apa itu puniko")) reply = "Punico adalah komunitas mahasiswa pecinta budaya Jepang di President University.";
   else if (msg.toLowerCase().includes("bagaimana cara bergabung")) reply = "Kamu bisa bergabung dengan menghubungi kami melalui halaman Hubungi Kami.";
@@ -349,6 +350,9 @@ function sendMessage() {
   else if (msg.toLowerCase().includes("kapan puniko berdiri")) reply = "Punico berdiri pada tahun 2017.";
   else if (msg.toLowerCase().includes("apa kegiatan puniko")) reply = "Kami mengadakan berbagai kegiatan seperti Punico Matsuri, workshop manga, karaoke night, dan masih banyak lagi!";
   else if (msg.toLowerCase().includes("siapa ketua puniko")) reply = "Ketua Punico saat ini adalah @AlvRyan.";
+  else if (msg.toLowerCase().includes("terima kasih banyak")) reply = "Sama-sama! Senang bisa membantu 😊";
+  else if (msg.toLowerCase().includes("siapa wakil ketua punico")) reply = "Wakil ketua Punico saat ini adalah @PinkRyu.";
+  else if (msg.toLowerCase().includes("siapa sekretaris punicco")) reply = "Sekretaris Punico saat ini adalah @Dwi-senpai.";
   else if (msg.toLowerCase().includes("bye")) reply = "Sampai jumpa 👋";
   setTimeout(() => appendMessage(reply, "bot"), 500);
   input.value = "";
