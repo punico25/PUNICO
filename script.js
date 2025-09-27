@@ -8,185 +8,49 @@ const images = [
   'images/img5.jpg',
   'images/img6.jpg'
 ];
+
+const animations = [
+  'fade-in',
+  'slide-left',
+  'slide-right',
+  'zoom-in',
+  'door-open'
+];
+
 let currentIndex = 0;
 
+// Tampilkan gambar awal
+hero.style.backgroundImage = `url('${images[currentIndex]}')`;
+hero.classList.add('fade-in');
+
+// Fungsi ganti background dengan animasi acak
 function changeBackground() {
+  // Hitung index gambar berikut
   currentIndex = (currentIndex + 1) % images.length;
+
+  // Pilih animasi acak
+  const randomAnim = animations[Math.floor(Math.random() * animations.length)];
+
+  // Hapus semua animasi dulu
+  hero.classList.remove(...animations);
+
+  // Ganti gambar
   hero.style.backgroundImage = `url('${images[currentIndex]}')`;
+
+  // Tambahkan animasi
+  // Timeout kecil agar class re-trigger (mencegah tidak animasi jika sama)
+  setTimeout(() => {
+    hero.classList.add(randomAnim);
+  }, 10);
 }
 
-// Ganti setiap 5 detik
+// Ganti gambar setiap 5 detik
 setInterval(changeBackground, 5000);
 
+    // set footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-// === BERITA (Tampilan Publik Saja) ===
-// Data berita bisa diambil dari server nanti.
-// Untuk demo kita buat statis:
-const beritaList = document.getElementById('beritaList');
-
-// === DATA BERITA ===
-const contohBerita = [
-  {
-    judul: 'Punico Matsuri',
-    isi: 'Punico Matsuri akan diadakan pada 5 Januari 2026. Diharapkan kepada seluruh anggota untuk bersiap-siap dengan cosplay terbaik!'
-  },
-  {
-    judul: 'Workshop Manga Digital',
-    isi: 'Pelatihan menggambar manga secara digital dengan software Clip Studio akan digelar pada 15 November 2025.'
-  },
-  {
-    judul: 'Pameran Figurine PUNICO',
-    isi: 'Pameran koleksi figurine karakter anime langka akan diadakan di Aula Kampus pada 20 Desember 2025.'
-  },
-  {
-    judul: 'Lomba Karaoke Anime OST',
-    isi: 'Lomba karaoke khusus lagu-lagu anime favorit akan diselenggarakan pada 12 Februari 2026.'
-  },
-  {
-    judul: 'PUNICO Game Night',
-    isi: 'Malam game bersama anggota PUNICO dengan turnamen Genshin Impact dan Valorant pada 1 Maret 2026.'
-  },
-  {
-    judul: 'Donasi untuk Komunitas Pecinta Anime',
-    isi: 'PUNICO menggalang dana untuk membantu anak-anak yang ingin belajar seni menggambar anime. Program ini dibuka sepanjang tahun 2025–2026.'
-  }
-];
-
-
-function renderBerita() {
-  beritaList.innerHTML = contohBerita.map(item => `
-    <div class="berita-item">
-      <h3>${item.judul}</h3>
-      <p>${item.isi}</p>
-    </div>
-  `).join('');
-}
-
-renderBerita();
-
-// ===== LOGIN =====
-const submitLogin = document.getElementById('submitLogin');
-
-if (submitLogin) {
-  submitLogin.addEventListener('click', () => {
-    const user = document.getElementById('username').value.trim();
-    const pass = document.getElementById('password').value.trim();
-
-    if (user === 'admin' && pass === 'punico123') {
-      localStorage.setItem('isAdmin', 'true');
-      window.location.href = 'admin.html';  // arahkan ke admin panel
-    } else {
-      alert('Username / Password salah!');
-    }
-  });
-}
-
-// ===== CEK AKSES ADMIN =====
-if (window.location.pathname.includes('admin.html')) {
-  const isAdmin = localStorage.getItem('isAdmin') === 'true';
-  if (!isAdmin) {
-    alert('Anda harus login dulu!');
-    window.location.href = 'login.html';
-  }
-}
-
-// ===== LOGOUT =====
-const logoutBtn = document.getElementById('logoutBtn');
-if (logoutBtn) {
-  logoutBtn.addEventListener('click', () => {
-    localStorage.removeItem('isAdmin');
-    window.location.href = 'index.html';
-  });
-}
-
-// ===== DATA BERITA =====
-let daftarBerita = JSON.parse(localStorage.getItem('berita')) ||  [
-  {
-    judul: 'Punico Matsuri',
-    isi: 'Punico Matsuri akan diadakan pada 5 Januari 2026. Diharapkan kepada seluruh anggota untuk bersiap-siap dengan cosplay terbaik!'
-  },
-  {
-    judul: 'Workshop Manga Digital',
-    isi: 'Pelatihan menggambar manga secara digital dengan software Clip Studio akan digelar pada 15 November 2025.'
-  },
-  {
-    judul: 'Pameran Figurine PUNICO',
-    isi: 'Pameran koleksi figurine karakter anime langka akan diadakan di Aula Kampus pada 20 Desember 2025.'
-  },
-  {
-    judul: 'Lomba Karaoke Anime OST',
-    isi: 'Lomba karaoke khusus lagu-lagu anime favorit akan diselenggarakan pada 12 Februari 2026.'
-  },
-  {
-    judul: 'PUNICO Game Night',
-    isi: 'Malam game bersama anggota PUNICO dengan turnamen Genshin Impact dan Valorant pada 1 Maret 2026.'
-  },
-  {
-    judul: 'Donasi untuk Komunitas Pecinta Anime',
-    isi: 'PUNICO menggalang dana untuk membantu anak-anak yang ingin belajar seni menggambar anime. Program ini dibuka sepanjang tahun 2025–2026.'
-  }
-];
-
-// ===== RENDER BERITA DI HALAMAN UTAMA =====
-const beritaList1 = document.getElementById('beritaList');
-if (beritaList) renderBeritaPengunjung();
-
-function renderBeritaPengunjung() {
-  beritaList.innerHTML = '';
-  daftarBerita.forEach(b => {
-    const div = document.createElement('div');
-    div.className = 'berita-item';
-    div.innerHTML = `<h4>${b.judul}</h4><p>${b.isi}</p>`;
-    beritaList.appendChild(div);
-  });
-}
-
-// ===== RENDER BERITA DI ADMIN =====
-const beritaAdminList = document.getElementById('beritaAdminList');
-if (beritaAdminList) renderBeritaAdmin();
-
-function renderBeritaAdmin() {
-  beritaAdminList.innerHTML = '';
-  daftarBerita.forEach((b, i) => {
-    const div = document.createElement('div');
-    div.className = 'berita-item';
-    div.innerHTML = `
-      <h4>${b.judul}</h4>
-      <p>${b.isi}</p>
-      <button onclick="hapusBerita(${i})">Hapus</button>
-    `;
-    beritaAdminList.appendChild(div);
-  });
-}
-
-function hapusBerita(index) {
-  daftarBerita.splice(index, 1);
-  renderBeritaAdmin();
-}
-
-// ===== TAMBAH BERITA DI ADMIN =====
-const tambahBeritaBtn = document.getElementById('tambahBeritaBtn');
-if (tambahBeritaBtn) {
-  tambahBeritaBtn.addEventListener('click', () => {
-    const judul = document.getElementById('judulBerita').value.trim();
-    const isi = document.getElementById('isiBerita').value.trim();
-    if (judul && isi) {
-      daftarBerita.push({ judul, isi });
-      renderBeritaAdmin();
-      document.getElementById('judulBerita').value = '';
-      document.getElementById('isiBerita').value = '';
-    }
-  });
-}
-
-// ===== SAVE PERUBAHAN =====
-const saveChanges = document.getElementById('saveChanges');
-if (saveChanges) {
-  saveChanges.addEventListener('click', () => {
-    localStorage.setItem('berita', JSON.stringify(daftarBerita));
-    alert('Perubahan disimpan!');
-  });
-}
+    // Optional: if you want auto-refresh or load more, add here.
 
 // ===== GAMBAR TERBANG DI KIRI DAN KANAN =====
 const leftLayer = document.querySelector('.floating-layer.left');
