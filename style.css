@@ -947,7 +947,7 @@ body, html {
 }
 
 #chat-toggle img {
-  width: 80%;
+  width: 100%;
   height: 100%;
 }
 
@@ -1035,5 +1035,6 @@ body, html {
   padding: 5px 15px;
   cursor: pointer;
 }
+
 
 
