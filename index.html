@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">
@@ -31,6 +30,8 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-overlay"></div>
+    
+     <div class="hero"></div>
     <div class="hero-content">
       <h1>A little place<br>of paradise</h1>
       <p>Selamat datang di website PUNICO. Temukan berita, event, dan informasi terbaru komunitas kami.</p>
@@ -39,16 +40,46 @@
     </div>
   </section>
 
-  <!-- Berita -->
-  <section id="berita" class="berita">
-    <h2>Berita Terbaru</h2>
-    <div id="beritaList" class="berita-list">
-      <p>Belum ada berita.</p>
+  <!-- ===== BERITA TERBARU ===== -->
+<section class="news-container" id="berita">
+  <h1 class="section-title">Berita Terbaru</h1>
+  <div class="news-grid">
+
+    <!-- Berita 1 -->
+    <div class="news-card">
+      <img src="images/academic1.jpg" alt="Puniko Matsuri">
+      <div class="news-content">
+        <h3>Puniko Matsuri 2026</h3>
+        <p>Puniko Matsuri akan diadakan pada <strong>5 Januari 2026</strong>. 
+           Diharapkan seluruh anggota mempersiapkan cosplay terbaiknya!</p>
+        <a href="berita/puniko-matsuri.html" class="read-more">Baca Selengkapnya</a>
+      </div>
     </div>
-  </section>
-  <div class="see-more">
-    <a href="berita.html" class="see-more-btn">Lihat Semua Berita</a>
+
+    <!-- Berita 2 -->
+    <div class="news-card">
+      <img src="images/manga1.jpeg" alt="Workshop Manga">
+      <div class="news-content">
+        <h3>Workshop Manga</h3>
+        <p>Belajar menggambar manga bersama seniman terkenal di acara bulan depan!</p>
+        <a href="berita/workshop-manga.html" class="read-more">Baca Selengkapnya</a>
+      </div>
+    </div>
+
+    <!-- Berita 3 -->
+    <div class="news-card">
+      <img src="images/ongaku1.jpg" alt="Karaoke Night">
+      <div class="news-content">
+        <h3>Karaoke Night</h3>
+        <p>Bergabunglah di malam karaoke bersama teman-teman PUNICO, ayo nyanyikan lagu anime favorit!</p>
+        <a href="berita/karaoke-night.html" class="read-more">Baca Selengkapnya</a>
+      </div>
+    </div>
+
+    <!-- Tambahkan berita lainnya dengan pola yang sama -->
+    
   </div>
+</section>
 
   <!-- ================== TOKO DI HALAMAN UTAMA ================== -->
 <section class="store-container home-store">
@@ -149,7 +180,7 @@
     <div class="about-image">
       <img src="images/img1.jpg" alt="PUNICO Team">
     </div>
-    
+
     <div class="about-text">
       <p>
         <strong>PUNICO</strong> (President University Nippon Community) adalah komunitas mahasiswa yang mencintai budaya Jepang. 
@@ -252,6 +283,7 @@ function showSlides(n) {
 // Auto-slide every 5 seconds
 setInterval(() => { plusSlides(1); }, 5000);
 </script>
+
 
 </body>
 </html>
