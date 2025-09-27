@@ -924,14 +924,14 @@ body, html {
   text-decoration: none;
   font-size: 0.9rem;
   color: #fff;
-  background: #e0486d;
+  background: #DB7E91;
   padding: 6px 12px;
   border-radius: 6px;
   transition: background 0.3s;
 }
 
 .read-more:hover {
-  background: #c5375b;
+  background: #DB7E91;
 }
 /* Tombol Chat */
 #chat-toggle {
@@ -1035,6 +1035,7 @@ body, html {
   padding: 5px 15px;
   cursor: pointer;
 }
+
 
 
 
